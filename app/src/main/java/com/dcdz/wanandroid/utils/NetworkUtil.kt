@@ -37,6 +37,18 @@ class NetworkUtil{
         }
 
         /**
+         * check NetworkConnected
+         *
+         * @param context
+         * @return
+         */
+        fun isNetworkConnected(context: Context): Boolean {
+            val manager = context.applicationContext.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+            val info = manager.activeNetworkInfo
+            return !(null == info || !info.isConnected)
+        }
+
+        /**
          * 得到ip地址
          *
          * @return
