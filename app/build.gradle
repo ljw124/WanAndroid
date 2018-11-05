@@ -13,6 +13,13 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+
+        // 设置支持的SO库架构，用于腾讯Bugly
+        ndk {
+            abiFilters 'armeabi' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
     }
     buildTypes {
         release {
@@ -65,4 +72,10 @@ dependencies {
     implementation('com.github.bumptech.glide:okhttp3-integration:4.7.1') {
         exclude group: 'glide-parent'
     }
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'org.litepal.android:core:2.0.0'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    //leakCanary
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.1'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.1'
 }
