@@ -19,6 +19,7 @@ import java.util.concurrent.TimeUnit
 
 /**
  * Created by LJW on 2018/11/6.
+ * Retrofit封装网络请求
  */
 object RetrofitHelper {
 

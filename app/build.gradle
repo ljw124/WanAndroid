@@ -84,4 +84,5 @@ dependencies {
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.42'
     implementation 'com.afollestad.material-dialogs:commons:0.9.6.0'
     implementation 'com.github.clans:fab:1.6.4'
+    implementation 'org.jetbrains.anko:anko:0.10.7'
 }

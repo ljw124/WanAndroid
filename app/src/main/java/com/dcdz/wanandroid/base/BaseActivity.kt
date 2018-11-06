@@ -21,6 +21,7 @@ import com.dcdz.wanandroid.utils.CommonUtil
 import com.dcdz.wanandroid.utils.Preference
 import com.dcdz.wanandroid.utils.SettingUtil
 import com.dcdz.wanandroid.utils.StatusBarUtil
+import org.apache.log4j.Logger
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
@@ -29,6 +30,8 @@ import org.greenrobot.eventbus.ThreadMode
  * Created by LJW on 2018/11/5.
  */
 abstract class BaseActivity : AppCompatActivity() {
+
+    internal var log = Logger.getLogger(BaseActivity::class.java!!)
 
     /**
      * 是否登录

@@ -11,6 +11,7 @@ import com.dcdz.wanandroid.MyApplication
 import com.dcdz.wanandroid.api.Constant
 import com.dcdz.wanandroid.event.NetworkChangeEvent
 import com.dcdz.wanandroid.utils.Preference
+import org.apache.log4j.Logger
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
@@ -19,6 +20,8 @@ import org.greenrobot.eventbus.ThreadMode
  * Created by LJW on 2018/11/5.
  */
 abstract class BaseFragment : Fragment() {
+
+    internal var log = Logger.getLogger(BaseFragment::class.java!!)
 
     /**
      * check login

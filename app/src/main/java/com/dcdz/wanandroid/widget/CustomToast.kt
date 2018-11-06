@@ -26,4 +26,8 @@ class CustomToast {
         toast.view = view
         toast.setGravity(Gravity.CENTER, 0, 0)
     }
+
+    fun show() {
+        toast.show()
+    }
 }

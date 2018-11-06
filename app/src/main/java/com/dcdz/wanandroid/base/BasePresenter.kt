@@ -6,12 +6,15 @@ import android.arch.lifecycle.LifecycleOwner
 import android.arch.lifecycle.OnLifecycleEvent
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
+import org.apache.log4j.Logger
 import org.greenrobot.eventbus.EventBus
 
 /**
  * Created by LJW on 2018/11/6.
  */
 abstract class BasePresenter<V : IView> : IPresenter<V>, LifecycleObserver {
+
+    internal var log = Logger.getLogger(BasePresenter::class.java!!)
 
     var mView: V? = null
         private set
